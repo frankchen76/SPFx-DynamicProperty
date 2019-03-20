@@ -1,0 +1,13 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": false,
+    "environment": "spo",
+    "whichFolder": "subdir",
+    "version": "1.7.1",
+    "libraryName": "sp-fx-dynamic-property",
+    "libraryId": "3fb7fe2d-b567-46a1-8346-4b4288f24c60",
+    "packageManager": "npm",
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}

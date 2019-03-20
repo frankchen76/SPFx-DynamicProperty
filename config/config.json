@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hero-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/hero/HeroWebPart.js",
+          "manifest": "./src/webparts/hero/HeroWebPart.manifest.json"
+        }
+      ]
+    },
+    "location-source-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/locationSource/LocationSourceWebPart.js",
+          "manifest": "./src/webparts/locationSource/LocationSourceWebPart.manifest.json"
+        }
+      ]
+    },
+    "sp-fx-customizer-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spFxCustomizer/SpFxCustomizerApplicationCustomizer.js",
+          "manifest": "./src/extensions/spFxCustomizer/SpFxCustomizerApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HeroWebPartStrings": "lib/webparts/hero/loc/{locale}.js",
+    "LocationSourceWebPartStrings": "lib/webparts/locationSource/loc/{locale}.js",
+    "SpFxCustomizerApplicationCustomizerStrings": "lib/extensions/spFxCustomizer/loc/{locale}.js"
+  }
+}
