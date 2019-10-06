@@ -19,10 +19,10 @@
       "default": "Other"
     },
     "title": {
-      "default": "Hero (Local)"
+      "default": "TestHero"
     },
     "description": {
-      "default": "Hero description"
+      "default": "TestHero description"
     },
     "officeFabricIconFontName": "Page",
     "properties": {

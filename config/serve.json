@@ -9,7 +9,7 @@
   },
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://shajicreations.sharepoint.com/sites/franktestteam1/SitePages",
+      "pageUrl": "https://mcs1.sharepoint.com/sites/FrankTeam1/SitePages/Test2.aspx",
       "customActions": {
         "0c6626f9-6c11-4d8d-82ee-1be30f37f7fc": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -20,7 +20,7 @@
       }
     },
     "spFxCustomizer": {
-      "pageUrl": "https://shajicreations.sharepoint.com/sites/franktestteam1/SitePages",
+      "pageUrl": "https://mcs1.sharepoint.com/sites/FrankTeam1/SitePages/Test2.aspx",
       "customActions": {
         "0c6626f9-6c11-4d8d-82ee-1be30f37f7fc": {
           "location": "ClientSideExtension.ApplicationCustomizer",
