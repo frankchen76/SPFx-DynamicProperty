@@ -43,7 +43,7 @@
       "name": "Hosted customizer",
       "type": "chrome",
       "request": "launch",
-      "url": "https://shajicreations.sharepoint.com/sites/FrankTestTeam1/SitePages/TestPage1.aspx?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%220c6626f9-6c11-4d8d-82ee-1be30f37f7fc%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22testMessage%22%3A%22Test+message%22%7D%7D%7D",
+      "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1/SitePages/ExtensionPage.aspx?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%220c6626f9-6c11-4d8d-82ee-1be30f37f7fc%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22testMessage%22%3A%22Test+message%22%7D%7D%7D",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
