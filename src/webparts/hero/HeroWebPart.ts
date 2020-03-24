@@ -17,6 +17,9 @@ import Hero from './components/Hero';
 import { IHeroProps } from './components/IHeroProps';
 import { autobind } from 'office-ui-fabric-react';
 import { IDynamicDataPropertyDefinition, IDynamicDataCallables } from '@microsoft/sp-dynamic-data';
+import { SingleMessageSubscriber } from '../../services/SingleMessageSubscriber';
+import { ILocationMsg } from '../../services/ILocationMsg';
+import { LocationMsgPublisher } from '../../services/LocationMsgPublisher';
 
 export interface IHeroWebPartProps {
   description: string;
@@ -32,6 +35,7 @@ export default class HeroWebPart extends BaseClientSideWebPart<IHeroWebPartProps
   private EVENT_SOURCEID = "0c6626f9-6c11-4d8d-82ee-1be30f37f7fc";//"f173f388-0013-40f7-85ee-e8136ae19cf1";
   private _currentSourceId: string;
   private _command: ICommand = undefined;
+  private _locationSubscriber: SingleMessageSubscriber<ILocationMsg>;
 
   protected onInit() {
     return super.onInit()
@@ -51,12 +55,21 @@ export default class HeroWebPart extends BaseClientSideWebPart<IHeroWebPartProps
       console.log("source: " + source.id);
       if (source.id.indexOf(this.EVENT_SOURCEID) != -1) {
         this._currentSourceId = source.id;
-        this.context.dynamicDataProvider.registerSourceChanged(source.id, this._locationChanged);
+        //this.context.dynamicDataProvider.registerSourceChanged(source.id, this._locationChanged);
+        this._locationSubscriber = new SingleMessageSubscriber(this.context.dynamicDataProvider,
+          source,
+          LocationMsgPublisher.LOCATION_MSG_ID,
+          this._locationSubscriberHandler);
         ret = true;
         break;
       }
     }
     return ret;
+  }
+  @autobind
+  private _locationSubscriberHandler(val: ILocationMsg): void {
+    this.properties.location1 = val;
+    this.render();
   }
   @autobind
   private _locationChanged(): void {

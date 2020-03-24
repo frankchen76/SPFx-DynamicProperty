@@ -1,5 +1,7 @@
+import { ILocationMsg } from "../../../services/ILocationMsg";
+
 export interface IHeaderProps {
-    test?: string;
-    onLocationChanged: (address: string) => void;
-    showPanel?: boolean;
+  test?: string;
+  onLocationChanged: (location: ILocationMsg) => void;
+  showPanel?: boolean;
 }

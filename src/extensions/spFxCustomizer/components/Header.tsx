@@ -49,7 +49,7 @@ export default class SPFxHeader extends React.Component<IHeaderProps, IHeaderSta
   @autobind
   private _savePanel(): void {
     this.setState({ showPanel: false });
-    this.props.onLocationChanged(this._selectedLocation);
+    this.props.onLocationChanged({ location: this._selectedLocation, message: 'location is selected' });
   }
 
   private _onRenderFooterContent = () => {
